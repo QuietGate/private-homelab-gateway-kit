@@ -1,6 +1,6 @@
 # Support Boundaries
 
-Private Homelab Gateway Kit is designed to be beginner-friendly, but it cannot cover every possible homelab setup.
+QuietGate is designed to be beginner-friendly, but it cannot cover every possible homelab setup.
 
 The goal is to provide a small, security-focused base stack for private remote access through Tailscale and Traefik. Keep the base stack working before adding more apps or custom networking.
 

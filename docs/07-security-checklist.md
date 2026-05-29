@@ -2,7 +2,7 @@
 
 ## What this checklist is for
 
-Use this checklist before and after starting Private Homelab Gateway Kit.
+Use this checklist before and after starting QuietGate.
 
 The goal is to access self-hosted apps through Tailscale and Traefik without opening public router ports. This checklist helps confirm that the stack is still using the intended private-access model.
 

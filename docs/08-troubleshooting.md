@@ -1,6 +1,6 @@
 # Troubleshooting
 
-This guide covers common first-run problems with Private Homelab Gateway Kit.
+This guide covers common first-run problems with QuietGate.
 
 Keep the stack small while troubleshooting. Get Homepage, Uptime Kuma, and Whoami working through Tailscale before adding more apps.
 

@@ -1,6 +1,6 @@
 # Traefik Guide
 
-Traefik is the reverse proxy in Private Homelab Gateway Kit.
+Traefik is the reverse proxy in QuietGate.
 
 It receives private HTTP requests from your Tailscale network, reads Docker labels, and routes each request to the correct app container.
 

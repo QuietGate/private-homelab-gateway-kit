@@ -91,7 +91,7 @@ count_public_web_binds() {
   '
 }
 
-echo "Private Homelab Gateway Kit exposure check"
+echo "QuietGate exposure check"
 echo
 echo "Note: this checks local host and Docker bindings only."
 echo "It cannot prove whether your router or firewall has public port forwarding enabled."

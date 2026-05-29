@@ -4,7 +4,7 @@ This guide assumes you are using Ubuntu, Debian, a Proxmox VM, or a Proxmox LXC 
 
 ## What this guide sets up
 
-This guide starts the core Private Homelab Gateway Kit stack:
+This guide starts the core QuietGate stack:
 
 - Traefik reverse proxy
 - Homepage dashboard

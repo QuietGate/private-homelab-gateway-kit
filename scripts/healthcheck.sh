@@ -55,7 +55,7 @@ container_running() {
   [[ "$(docker inspect -f '{{.State.Running}}' "$name" 2>/dev/null || true)" == "true" ]]
 }
 
-echo "Private Homelab Gateway Kit health check"
+echo "QuietGate health check"
 echo
 
 if [[ ! -f "docker-compose.yml" ]]; then

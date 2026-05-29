@@ -1,6 +1,6 @@
 # DNS Options
 
-Private Homelab Gateway Kit uses hostnames so Traefik can route each request to the right app.
+QuietGate uses hostnames so Traefik can route each request to the right app.
 
 The quick start uses `nip.io` because it is the lowest-friction way to get working private URLs without editing hosts files or running your own DNS server.
 

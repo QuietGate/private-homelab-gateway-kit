@@ -1,6 +1,6 @@
 # Adding Apps
 
-This guide explains the safe pattern for adding more Docker apps to Private Homelab Gateway Kit.
+This guide explains the safe pattern for adding more Docker apps to QuietGate.
 
 Keep the base stack working before adding more services. Add one app at a time, then test before moving on.
 

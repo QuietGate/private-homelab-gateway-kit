@@ -1,6 +1,6 @@
 # Tailscale Guide
 
-Private Homelab Gateway Kit uses Tailscale as the private access layer.
+QuietGate uses Tailscale as the private access layer.
 
 For this kit, Tailscale is installed on the host server. It is not run as a Docker container.
 

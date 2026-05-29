@@ -1,6 +1,6 @@
 # Architecture
 
-Private Homelab Gateway Kit is built around one idea: private access first.
+QuietGate is built around one idea: private access first.
 
 Your apps are reached through Tailscale and Traefik, without opening public router ports for the base stack.
 

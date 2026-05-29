@@ -1,12 +1,12 @@
-# Private Homelab Gateway Kit
+# QuietGate
 
-Secure remote access to your homelab apps with **Tailscale + Traefik**, without opening public ports.
+Private homelab access with Tailscale + Traefik, without opening public ports.
 
 Current release: `0.1.0-free`
 
 ## What this is
 
-Private Homelab Gateway Kit is a beginner-friendly Docker deployment kit for safely accessing self-hosted apps from private devices.
+QuietGate is a private homelab gateway starter kit for safely accessing self-hosted apps from private devices.
 
 It is designed for people running a small homelab on a:
 

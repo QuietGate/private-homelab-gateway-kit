@@ -2,7 +2,9 @@
 
 ## 0.1.0-free - Starter free release
 
-Initial free/starter release of Private Homelab Gateway Kit.
+Initial free/starter release of QuietGate.
+
+Private homelab access with Tailscale + Traefik, without opening public ports.
 
 Included features:
 
