@@ -1,0 +1,10 @@
+- Documentation:
+    - Tailscale:
+        - abbr: TS
+          href: https://tailscale.com/kb/
+    - Traefik:
+        - abbr: TR
+          href: https://doc.traefik.io/traefik/
+    - Homepage:
+        - abbr: HP
+          href: https://gethomepage.dev/

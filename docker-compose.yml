@@ -1,0 +1,92 @@
+services:
+  traefik:
+    image: traefik:latest
+    container_name: phgk-traefik
+    restart: unless-stopped
+
+    command:
+      - "--api.dashboard=false"
+      - "--api.insecure=false"
+
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+
+      - "--entrypoints.web.address=:80"
+
+      - "--log.level=INFO"
+      - "--accesslog=true"
+
+    ports:
+      # Bind Traefik only to the server's Tailscale IP.
+      # This avoids exposing the reverse proxy on all host interfaces.
+      - "${TAILSCALE_IP}:80:80"
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+    networks:
+      - gateway
+
+    labels:
+      - "traefik.enable=true"
+
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: phgk-homepage
+    restart: unless-stopped
+
+    environment:
+      - TZ=${TZ}
+      - HOMEPAGE_ALLOWED_HOSTS=${HOMEPAGE_ALLOWED_HOSTS}
+
+    volumes:
+      - ${HOMEPAGE_CONFIG_DIR}:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+    networks:
+      - gateway
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.homepage.rule=Host(`homepage.${BASE_DOMAIN}`)"
+      - "traefik.http.routers.homepage.entrypoints=web"
+      - "traefik.http.services.homepage.loadbalancer.server.port=3000"
+
+  uptime-kuma:
+    image: louislam/uptime-kuma:latest
+    container_name: phgk-uptime-kuma
+    restart: unless-stopped
+
+    environment:
+      - TZ=${TZ}
+
+    volumes:
+      - ${APPDATA_DIR}/uptime-kuma:/app/data
+
+    networks:
+      - gateway
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.uptime-kuma.rule=Host(`uptime.${BASE_DOMAIN}`)"
+      - "traefik.http.routers.uptime-kuma.entrypoints=web"
+      - "traefik.http.services.uptime-kuma.loadbalancer.server.port=3001"
+
+  whoami:
+    image: traefik/whoami:latest
+    container_name: phgk-whoami
+    restart: unless-stopped
+
+    networks:
+      - gateway
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`whoami.${BASE_DOMAIN}`)"
+      - "traefik.http.routers.whoami.entrypoints=web"
+      - "traefik.http.services.whoami.loadbalancer.server.port=80"
+
+networks:
+  gateway:
+    name: phgk_gateway
+    driver: bridge

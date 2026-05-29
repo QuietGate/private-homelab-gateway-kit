@@ -1,0 +1,9 @@
+title: Private Homelab Gateway Kit
+theme: dark
+color: slate
+language: en
+
+layout:
+  Homelab:
+    style: row
+    columns: 3

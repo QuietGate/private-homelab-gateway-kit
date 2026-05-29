@@ -1,0 +1,10 @@
+- Homelab:
+    - Uptime Kuma:
+        href: http://uptime.${BASE_DOMAIN}
+        description: Private monitoring dashboard
+        icon: uptime-kuma.svg
+
+    - Whoami:
+        href: http://whoami.${BASE_DOMAIN}
+        description: Traefik routing test app
+        icon: docker.svg
